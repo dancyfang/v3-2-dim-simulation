@@ -13,11 +13,6 @@ X = zeros(M,3);
 % id
 X(:,1) = 1:M;
 % 1/price, rate
-% In order to demonstrate the difference between attribute preferences, 
-% choice set should have two types of products:
-% type 1: high 1/price, low rate, type2: low 1/price, high rate 
-% X(1:M/2,2:3) = mvnrnd([0.7,0.3],[0.0225,-0.018;-0.018,0.0225],M/2);
-% X(M/2+1:M,2:3) = mvnrnd([0.3,0.7],[0.0225,-0.018;-0.018,0.0225],M/2);
 X(:,2:3) = mvnrnd([0.5,0.5],[0.0225,-0.01575;-0.01575,0.0225],M);
 
 % users: Y(n,:) = [id,age,income]
